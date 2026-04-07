@@ -1,3 +1,4 @@
+// ~/MXNTranslate-Backend/server/routes/translate.js
 const express = require("express");
 const router = express.Router();
 const redis = require("../services/redisClient");

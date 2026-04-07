@@ -1,20 +1,26 @@
 {
-  "name": "mxntranslate-backend",
+  "name": "mxn-translate-backend",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Backend API for MXN Translate Discord Bot Dashboard",
+  "main": "server/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js",
+    "pm2:start": "pm2 start server/index.js --name mxn-translate-api",
+    "pm2:stop": "pm2 stop mxn-translate-api",
+    "pm2:restart": "pm2 restart mxn-translate-api",
+    "pm2:delete": "pm2 delete mxn-translate-api",
+    "pm2:logs": "pm2 logs mxn-translate-api"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
+    "better-sqlite3": "^9.6.0",
     "cors": "^2.8.5",
-    "dotenv": "^16.5.0",
-    "express": "^5.2.0",
-    "ioredis": "^5.6.1",
-    "pg": "^8.14.1"
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "luxon": "^3.7.2",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
   }
 }
